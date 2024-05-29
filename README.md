@@ -26,7 +26,7 @@ Obtén tus credenciales de Immaga en el siguiente enlace: (https://docs.imagga.c
 # 3.- Dirigirse a la carpeta del aplicativo
 Dirigirse a la carpeta del aplicativo ejemplo cd proyecto-docker
 # 4.- Crear el archivo del dockerfile
-Primero se crea el archivo del Dockerfile antes de la creación de la imagen en docker cabe recalcar que solo debe crear el archivo sin necesidad de poner una extension, tantos los requirements.txt y docker-compose.yml ya estan configurados solo faltaria el DockerFile aqui un como deberia verse el Dockerfile ejemplo: 
+Primero se crea el archivo del Dockerfile antes de la creación de la imagen en docker cabe recalcar que solo debe crear el archivo sin necesidad de poner una extension, tantos los requirements.txt y docker-compose.yml ya estan configurados solo faltaria el DockerFile aqui un ejemplo como deberia verse el Dockerfile: 
 ## Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
