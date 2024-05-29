@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-item {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analizador de Imagenes</h1>
+    <button onclick="classifyImages()">Analizar Imagenes</button>
+    <div id="buttons" class="button-container">
+        <button onclick="filterImages('dog')">Mostrar Perro</button>
+        <button onclick="filterImages('cat')">Mostrar Gato</button>
+        <button onclick="showAllImages()">Mostrar Todo</button>
+    </div>
+    <div id="image-results" class="image-container">
+        {% for image in images %}
+            <img src="/imagenes/{{ image }}" class="image-item" data-filename="{{ image }}" alt="Unclassified">
+        {% endfor %}
+    </div>
+
+    <script>
+        function classifyImages() {
+            fetch('/classify')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(item => {
+                        const img = document.querySelector(`img[data-filename="${item.filename}"]`);
+                        img.dataset.category = item.category;
+                        img.alt = item.category;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function filterImages(category) {
+            const images = document.querySelectorAll('.image-item');
+            images.forEach(img => {
+                if (img.dataset.category === category) {
+                    img.style.display = '';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+
+        function showAllImages() {
+            const images = document.querySelectorAll('.image-item');
+            images.forEach(img => {
+                img.style.display = '';
+            });
+        }
+    </script>
+</body>
+</html>
