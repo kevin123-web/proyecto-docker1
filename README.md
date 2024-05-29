@@ -25,8 +25,8 @@ Sigue las instrucciones proporcionadas en el README.md del proyecto para configu
 Obtén tus credenciales de Immaga en el siguiente enlace: (https://docs.imagga.com/#getting-started-signup) una vez realizado reemplace sus credenciales en API_KEY=TU_API_KEY y API_SECRET_KEY=TU_SECRET_KEY remplazarlas en el app.py y index.html .
 # 3.- Dirigirse a la carpeta del aplicativo
 Dirigirse a la carpeta del aplicativo ejemplo cd proyecto-docker
-# 4.- Crear el archivo del dockerfile
-Primero se crea el archivo del Dockerfile antes de la creación de la imagen en docker cabe recalcar que solo debe crear el archivo sin necesidad de poner una extension, tantos los requirements.txt y docker-compose.yml ya estan configurados solo faltaria el DockerFile aqui un ejemplo como deberia verse el Dockerfile: 
+# 4.- Verificar el archivo del dockerfile
+Primero se verifica el archivo del Dockerfile antes de la creación de la imagen en docker cabe recalcar que solo debe verificarlo que este clonado junto al proyecto , los requirements.txt y docker-compose.yml ya estan configurados e  igual que Dockerfile, si en caso no se encuentra puede crear el DockerFile aqui un ejemplo como deberia verse el Dockerfile: 
 ## Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
