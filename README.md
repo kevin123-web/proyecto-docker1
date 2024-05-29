@@ -22,7 +22,7 @@ Sigue las instrucciones proporcionadas en el README.md del proyecto para configu
 # 1.- Clonar el Repositorio  
  Git clone https://github.com/kevin123-web/proyecto-docker1
 # 2.- Configurar las Credenciales de Immaga
-Obtén tus credenciales de Immaga en el siguiente enlace: (https://docs.imagga.com/#getting-started-signup) una vez realizado reemplace sus credenciales en API_KEY=TU_API_KEY y API_SECRET_KEY=TU_SECRET_KEY
+Obtén tus credenciales de Immaga en el siguiente enlace: (https://docs.imagga.com/#getting-started-signup) una vez realizado reemplace sus credenciales en API_KEY=TU_API_KEY y API_SECRET_KEY=TU_SECRET_KEY remplazarlas en el app.py y index.html .
 # 3.- Dirigirse a la carpeta del aplicativo
 Dirigirse a la carpeta del aplicativo ejemplo cd proyecto-docker
 # 4.- Crear el archivo del dockerfile
